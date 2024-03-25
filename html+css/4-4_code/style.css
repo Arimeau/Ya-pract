@@ -1,0 +1,84 @@
+@media screen and (max-width: 768px) {
+    /* Новые правила */
+    }
+
+@media screen and (min-width: 450px) and (max-width: 768px) {
+/* 
+    Новые правила, которые будут действовать в случае, 
+    если ширина окна больше 450 пикселей и меньше 768 пикселей
+*/
+}
+
+@media screen and (max-width: 768px) and (pointer: coarse) and (hover: none) {
+    /* 
+        Новые правила, которые будут действовать в случае, 
+        если ширина окна меньше 768 пикселей и устройство пользователя — устройство 
+        с сенсорным экраном
+    */
+    }
+
+@media not screen and (max-width: 768px) and (pointer: coarse) and (hover: none) {
+/* 
+    Новые правила, которые будут действовать в случае, 
+    если ширина окна не меньше 768 пикселей и устройство пользователя – 
+    не устройство с сенсорным экраном
+*/
+}
+
+.main__title {
+    font-size: 72px;
+}
+
+@media screen and (max-width: 768px) {
+    .main__title {
+        font-size: 36px;
+    }
+}
+
+.cards__nav {
+    /* ...правила для боковой панели */
+}
+
+@media screen and (max-width: 768px) {
+    .main__title {
+        font-size: 36px;
+    }
+
+    .cards__nav {
+        display: none;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .main__title {
+        font-size: 36px;
+    }
+
+    .cards { 
+        /* Класс контейнера, в котором хранятся синий блок и контейнер 
+        с голубыми блоками  */
+        flex-direction: column-reverse;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .main__title {
+        font-size: 36px;
+    }
+
+    .cards { 
+        /* Класс контейнера, в котором хранятся синий блок и контейнер 
+        с голубыми блоками  */
+        flex-direction: column-reverse;
+    }
+    
+    .cards__nav {
+        /* 
+            Значение unset снимает ограничение по ширине для этого блока. 
+            Если unset используется в правилах, где свойство наследуется 
+            (например, color), то оно срабатывает аналогично значению inherit. 
+            Если наследования нет, то действует аналогично значению initial 
+        */
+        max-width: unset;
+    }
+}
